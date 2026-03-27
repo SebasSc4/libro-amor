@@ -16,6 +16,7 @@ body {
   perspective: 1500px;
 }
 
+/* 🔥 CLAVE: ORDEN DE CAPAS */
 .page {
   position: absolute;
   width: 100%;
@@ -30,7 +31,17 @@ body {
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  backface-visibility: hidden;
 }
+
+/* 👉 esto arregla que solo se vea la última */
+.page:nth-child(1) { z-index: 7; }
+.page:nth-child(2) { z-index: 6; }
+.page:nth-child(3) { z-index: 5; }
+.page:nth-child(4) { z-index: 4; }
+.page:nth-child(5) { z-index: 3; }
+.page:nth-child(6) { z-index: 2; }
+.page:nth-child(7) { z-index: 1; }
 
 .page p, .page h2 {
   text-align: center;
