@@ -1,72 +1,67 @@
 body {
   margin: 0;
   height: 100vh;
-  background: #d6cfc7;
+  background: #f2e9e4;
   display: flex;
   justify-content: center;
   align-items: center;
-  perspective: 2000px;
+  flex-direction: column;
   font-family: Arial, sans-serif;
 }
 
 .book {
-  width: 320px;
-  height: 500px;
   position: relative;
+  width: 350px;
+  height: 500px;
+  perspective: 1500px;
 }
 
-/* PAGINAS */
 .page {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  background: white;
+  border-radius: 5px;
   transform-origin: left;
-  transition: transform 1s ease;
-  backface-visibility: hidden;
-
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 
-/* ORDEN (IMPORTANTE) */
-.page:nth-child(1) { z-index: 10; }
-.page:nth-child(2) { z-index: 9; }
-.page:nth-child(3) { z-index: 8; }
-.page:nth-child(4) { z-index: 7; }
-.page:nth-child(5) { z-index: 6; }
-.page:nth-child(6) { z-index: 5; }
-.page:nth-child(7) { z-index: 4; }
+.page p, .page h2 {
+  text-align: center;
+}
 
-/* VOLTEO */
-.page.flipped {
+.cover {
+  background: #ff4d6d;
+  color: white;
+  font-size: 24px;
+}
+
+.flipped {
   transform: rotateY(-180deg);
 }
 
-/* PORTADA */
-.cover {
-  background: linear-gradient(135deg, #ff4d6d, #c9184a);
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #ff4d6d;
   color: white;
-  font-size: 22px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-/* FINAL */
-.last {
-  background: #fff0f3;
-}
-
-/* LOMO */
-.book::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 100%;
-  left: -10px;
-  background: #999;
-  border-radius: 5px 0 0 5px;
+button:hover {
+  background: #e63950;
 }
