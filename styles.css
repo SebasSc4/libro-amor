@@ -11,12 +11,11 @@ body {
 
 .book {
   position: relative;
-  width: 600px;
-  height: 700px;
+  width: 600px;   /* 🔥 MÁS GRANDE */
+  height: 700px;  /* 🔥 MÁS GRANDE */
   perspective: 1500px;
 }
 
-/* 🔥 CLAVE: ORDEN DE CAPAS */
 .page {
   position: absolute;
   width: 100%;
@@ -29,12 +28,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
   backface-visibility: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-/* 👉 esto arregla que solo se vea la última */
+/* 🔥 ORDEN DE HOJAS */
 .page:nth-child(1) { z-index: 7; }
 .page:nth-child(2) { z-index: 6; }
 .page:nth-child(3) { z-index: 5; }
@@ -43,14 +43,23 @@ body {
 .page:nth-child(6) { z-index: 2; }
 .page:nth-child(7) { z-index: 1; }
 
-.page p, .page h2 {
+.page p {
+  text-align: center;
+  font-size: 18px; /* 🔥 TEXTO MÁS GRANDE */
+}
+
+.page h1 {
+  font-size: 32px; /* 🔥 PORTADA */
+}
+
+.page h2 {
+  font-size: 24px; /* 🔥 FINAL */
   text-align: center;
 }
 
 .cover {
   background: #ff4d6d;
   color: white;
-  font-size: 24px;
 }
 
 .flipped {
@@ -64,7 +73,7 @@ body {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   background: #ff4d6d;
   color: white;
