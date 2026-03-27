@@ -11,8 +11,8 @@ body {
 
 .book {
   position: relative;
-  width: 600px;   /* 🔥 MÁS GRANDE */
-  height: 700px;  /* 🔥 MÁS GRANDE */
+  width: 450px;
+  height: 650px;
   perspective: 1500px;
 }
 
@@ -34,7 +34,7 @@ body {
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-/* 🔥 ORDEN DE HOJAS */
+/* ORDEN DE HOJAS */
 .page:nth-child(1) { z-index: 7; }
 .page:nth-child(2) { z-index: 6; }
 .page:nth-child(3) { z-index: 5; }
@@ -43,17 +43,21 @@ body {
 .page:nth-child(6) { z-index: 2; }
 .page:nth-child(7) { z-index: 1; }
 
+/* 🔥 TEXTO MÁS GRANDE (AQUÍ EL CAMBIO REAL) */
 .page p {
   text-align: center;
-  font-size: 18px; /* 🔥 TEXTO MÁS GRANDE */
+  font-size: 22px;   /* antes 18px */
+  line-height: 1.5;
 }
 
+/* portada */
 .page h1 {
-  font-size: 32px; /* 🔥 PORTADA */
+  font-size: 34px;
 }
 
+/* última página */
 .page h2 {
-  font-size: 24px; /* 🔥 FINAL */
+  font-size: 26px;
   text-align: center;
 }
 
