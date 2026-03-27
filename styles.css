@@ -34,7 +34,7 @@ body {
   padding: 20px;
 }
 
-/* ORDEN CORRECTO */
+/* ORDEN (IMPORTANTE) */
 .page:nth-child(1) { z-index: 10; }
 .page:nth-child(2) { z-index: 9; }
 .page:nth-child(3) { z-index: 8; }
@@ -60,7 +60,7 @@ body {
   background: #fff0f3;
 }
 
-/* EFECTO LOMO */
+/* LOMO */
 .book::before {
   content: "";
   position: absolute;
