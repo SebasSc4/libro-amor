@@ -4,13 +4,18 @@ const audio = document.getElementById("musica");
 let currentPage = 0;
 let musicStarted = false;
 
+// 👉 iniciar audio SOLO una vez y con interacción real
+function startMusic() {
+  if (!musicStarted) {
+    audio.play().then(() => {
+      musicStarted = true;
+    }).catch(() => {});
+  }
+}
+
 // siguiente
 function nextPage() {
-
-  if (!musicStarted) {
-    audio.play().catch(() => {});
-    musicStarted = true;
-  }
+  startMusic();
 
   if (currentPage < pages.length) {
     pages[currentPage].classList.add("flipped");
