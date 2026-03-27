@@ -11,8 +11,8 @@ body {
 
 .book {
   position: relative;
-  width: 550px;
-  height: 650px;
+  width: 600px;
+  height: 700px;
   perspective: 1500px;
 }
 
