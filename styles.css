@@ -28,13 +28,13 @@ body {
   backface-visibility: hidden;
 
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 20px;
 }
 
-/* 🔥 ORDEN DE LAS PAGINAS */
+/* ORDEN CORRECTO */
 .page:nth-child(1) { z-index: 10; }
 .page:nth-child(2) { z-index: 9; }
 .page:nth-child(3) { z-index: 8; }
@@ -43,7 +43,7 @@ body {
 .page:nth-child(6) { z-index: 5; }
 .page:nth-child(7) { z-index: 4; }
 
-/* EFECTO DE VOLTEO */
+/* VOLTEO */
 .page.flipped {
   transform: rotateY(-180deg);
 }
@@ -52,33 +52,21 @@ body {
 .cover {
   background: linear-gradient(135deg, #ff4d6d, #c9184a);
   color: white;
+  font-size: 22px;
 }
 
-/* ÚLTIMA */
+/* FINAL */
 .last {
   background: #fff0f3;
 }
 
-p {
-  text-align: center;
-}
-
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  background: #ff4d6d;
-  color: white;
-  border-radius: 5px;
-}
-
-/* GROSOR DEL LIBRO */
+/* EFECTO LOMO */
 .book::before {
   content: "";
   position: absolute;
   width: 10px;
   height: 100%;
   left: -10px;
-  background: #aaa;
+  background: #999;
   border-radius: 5px 0 0 5px;
 }
